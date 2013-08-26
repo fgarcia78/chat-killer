@@ -1,0 +1,45 @@
+body {
+  cursor: default;
+  margin: 20px 20px;
+  font-family: Ubuntu, Arial, sans-serif;
+}
+
+p {
+  line-height: 1.8em;
+}
+
+h1,
+h2,
+h3 {
+  -webkit-user-select: none;
+  /* Makes the vertical size of the text the same for all fonts. */
+  line-height: 1;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.3em;
+  margin-bottom: 0.4em;
+}
+
+h3 {
+  color: black;
+  font-size: 1.2em;
+  margin-bottom: 0.8em;
+}
+
+a {
+  color: rgb(17, 85, 204);
+  text-decoration: underline;
+}
+
+a:active {
+  color: rgb(5, 37, 119);
+}
+
+.logo {
+  vertical-align: middle;
+}

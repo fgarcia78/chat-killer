@@ -1,17 +1,23 @@
 {
-  "name": "Chat killer (edx's cs-169.2x)",
-  "version": "1.0",
-  "description": "A extension to kill the chat iframe in edx.org's cs-169.2x course.",
+  "name": "Chat killer (edx.org's CS-169.2x)",
+  "version": "1.1.0",
+  "description": "An extension to automatically remove the chat component frame in edx.org's CS-169.2x course.",
+  "icons": { "16": "icon16.png",
+             "48": "icon48.png",
+            "128": "icon128.png" },
   "permissions": [
-    "activeTab", "https://courses.edx.org/courses/BerkeleyX/CS-169.2x/*"
+    "activeTab",
+    "https://courses.edx.org/courses/BerkeleyX/CS-169.2x/*",
+    "storage"
   ],
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
-  "browser_action": {
-    "default_title": "Chat killer (edx.org's cs-169.2x)",
-    "default_icon": "icon.png"
-  },
-  "manifest_version": 2
+  "content_scripts": [
+    {
+      "matches": ["https://courses.edx.org/courses/BerkeleyX/CS-169.2x/*"],
+      "js": ["kill-chat.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "options_page": "options.html",
+  "manifest_version": 2,
+  "author": "Fernando Garcia"
 }
