@@ -14,8 +14,15 @@ Chrome/Chromium extension to automatically kill the chat component in edx.org's 
 
 ## How to use
 
-Not need to do anything: the extension will remove automatically the chat component in any page of the CS-169.2x course. Go to the extension Options (in the Extensions page) if you want to disable it.
+There's no need to do anything: the extension will remove automatically the chat component in any page of the [CS-169.2x course][2]. Go to the extension Options (in the Extensions page) if you want to enable/disable some things.
+
+[2]: https://courses.edx.org/courses/BerkeleyX/CS-169.2x/2013_Summer/info
 
 ## How it works
 
-The extension simply looks for the DOM element of the chat iframe and kills it before the page starts to load the iframe.
+The extension simply looks for the DOM element of the chat iframe and kills it before the page starts to load the iframe. If its enabled, it will also display a red message instead of the chat component.
+
+## Credits
+
+Created by Fernando Garcia. Leave a comment/issue if you encounter any problems.
+Greetings from Mexico!
