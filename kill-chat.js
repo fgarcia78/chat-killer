@@ -1,12 +1,20 @@
 // is the extension enabled in this system?
 var enabled = null;
-chrome.storage.sync.get("chat_killer_enabled", function(check) {
+chrome.storage.sync.get(null, function(check) {
 	enabled = check["chat_killer_enabled"];
+	message = check["chat_killer_message"];
+
 	if (!enabled) {
 		// not previous value: set default to enabled
 		enabled = "1";
 		chrome.storage.sync.set({"chat_killer_enabled": enabled});
 	}
+	if (!message) {
+		// same for the message option
+		message = "1";
+		chrome.storage.sync.set({"chat_killer_message": message});
+	}
+
 	if (enabled == "1") {
 		var elem = document.getElementById("chatiframe");
 		if (elem != null)
@@ -17,6 +25,8 @@ chrome.storage.sync.get("chat_killer_enabled", function(check) {
 			elem = document.getElementById("loadingchat");
 			parent.removeChild(elem);
 			console.log('Chat iframe killed.');
+			if (message == "1")
+				parent.innerHTML = "<strong style='color: red;'>NOTE: The chat component was removed from this page.</strong>"
 		}
 		else
 		{

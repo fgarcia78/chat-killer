@@ -1,6 +1,6 @@
 {
   "name": "Chat killer (edx.org's CS-169.2x)",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "An extension to automatically remove the chat component frame in edx.org's CS-169.2x course.",
   "icons": { "16": "icon16.png",
              "48": "icon48.png",
