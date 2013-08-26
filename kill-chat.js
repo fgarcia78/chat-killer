@@ -25,6 +25,7 @@ chrome.storage.sync.get("chat_killer_enabled", function(check) {
 		}
 	}
 	else {
+		// nothing to do...
 		console.log('Extension not enabled.')
 	}
 });
